@@ -49,14 +49,15 @@ product.attributes.description[0]?.children && // Check if children exists
 <h2 className='text-[11px] 
 text-gray-500 flex gap-2 mt-2 items-center'>
   {product?.attributes?.instantDelivery ? 
-  <BadgeCheck className='w-5 h-5 text-green-500' /> : <
-	AlertOctagon />} 
+  <BadgeCheck className='w-5 h-5 text-green-500  bg-teal-600 ' /> : <
+	AlertOctagon 
+	className= 'text-teal-600 '/>} 
   Eligible For Instant Delivery
 </h2>
 <h2 className='text-[24px] text-primary mt-2'>$ {product?.attributes?.price}</h2>
 
 <button onClick={() => handleAddToCart()} 
-className='flex gap-2 p-2 text-white rounded-lg bg-primary hover:bg-teal-600'>
+className='flex gap-2 p-2 text-white bg-teal-600 rounded-lg bg-primary hover:bg-teal-600'>
 	<ShoppingCart /> Add To Cart</button>
 </div>
 :

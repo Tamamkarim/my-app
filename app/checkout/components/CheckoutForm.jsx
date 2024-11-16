@@ -1,9 +1,9 @@
 import { useStripe, useElements, PaymentElement } from '@stripe/react-stripe-js';
 import { useContext, useState } from 'react';
-import { CartContext } from '../../_context/CartContext';
+import { CartContext } from '../../context/CartContext';
 import { useUser } from '@clerk/nextjs';
-import OrderApi from '../../_utils/OrderApis'
-import CartApis from '../../_utils/CartApis';
+import OrderApi from '../../utils/OrderApis'
+import CartApis from '../../utils/CartApis';
 const CheckoutForm = ({ amount }) => {
 	const { cart, setCart } = useContext(CartContext)
 	const { user } = useUser()
@@ -97,7 +97,7 @@ const CheckoutForm = ({ amount }) => {
 	return (
 		<form onSubmit={handleSubmit}>
 			<div className='mx-32 md:mx-[320px] mt-12'><PaymentElement />
-				<button className='w-full p-2 mt-4 text-white rounded-md bg-primary'>Submit</button>
+				<button className='w-full p-2 mt-4 text-black rounded-md bg-primary'>Submit</button>
 			</div>
 
 		</form>

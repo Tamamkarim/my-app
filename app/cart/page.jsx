@@ -34,7 +34,7 @@ function Cart() {
 					<div className="mt-8">
 						<ul className="space-y-4">
 							{cart?.map((item) => (
-								<li className="flex items-center gap-4">
+								<li className="flex items-center gap-4" key={item?.id}>
 									<img
 										src={item?.product?.attributes?.banner?.data?.attributes?.url}
 										alt=""
